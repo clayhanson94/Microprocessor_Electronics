@@ -1,0 +1,56 @@
+
+int pin = 13;
+int cycles = 500;
+int luminance = 300; //# of on vs off from cycles
+int luminance2 = 122;
+int i;
+
+void setup() {
+  pinMode(pin, OUTPUT);
+  digitalWrite(pin, LOW);
+}
+
+void loop() {
+  pwm_function327();
+  pwm_function122();
+}
+
+
+void pwm_function327() {
+  extern int i;
+  extern int luminance;
+  extern int cycles;
+  extern int cylength;
+  extern int luminance2;
+
+  digitalWrite(pin, HIGH);
+
+  for (i = 0; i < cycles; i++) {
+    if (i == luminance) {
+      digitalWrite(pin, LOW);
+    }
+    else {
+
+      delayMicroseconds(200);
+    }
+  }
+}
+void pwm_function122() {
+  extern int i;
+  extern int luminance;
+  extern int cycles;
+  extern int cylength;
+  extern int luminance2;
+
+  digitalWrite(pin, HIGH);
+
+  for (i = 0; i < cycles; i++) {
+    if (i == luminance2) {
+      digitalWrite(pin, LOW);
+    }
+    else {
+
+      delayMicroseconds(200);
+    }
+  }
+}

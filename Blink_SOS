@@ -1,0 +1,56 @@
+/*
+ * Clayton G. Hanson
+ * Microprocessor Electronics
+ * Lab 01 - Part 01
+ * 01/17/2018
+ */
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(13, OUTPUT);
+}
+
+// the loop function runs over and over again forever (unless otherwise indicated)
+void loop() {
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(300);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(300);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(900);                       // wait for a second
+
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(900);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(900);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(900);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(900);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(900);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(900);                       // wait for a second
+
+   digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(300);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(300);                       // wait for a second
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(300);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(3000);                       // wait for a second
+
+  
+}

@@ -1,0 +1,131 @@
+int outpin1 = 0;
+int outpin2 = 1;
+int outpin3 = 2;
+int outpin4 = 3;
+int outpin5 = 4;
+int outpin6 = 5;
+int outpin7 = 6;
+int outpin8 = 7;
+
+int inpin1 = 8;
+int inpin2 = 9;
+int inpin3 = 10;
+
+int x;
+int y;
+int z;
+int aa;
+
+void setup() {
+  pinMode(outpin1, OUTPUT);
+  digitalWrite(outpin1, LOW);
+  pinMode(outpin2, OUTPUT);
+  digitalWrite(outpin2, LOW);
+  pinMode(outpin3, OUTPUT);
+  digitalWrite(outpin3, LOW);
+  pinMode(outpin4, OUTPUT);
+  digitalWrite(outpin4, LOW);
+  pinMode(outpin5, OUTPUT);
+  digitalWrite(outpin5, LOW);
+  pinMode(outpin6, OUTPUT);
+  digitalWrite(outpin6, LOW);
+  pinMode(outpin7, OUTPUT);
+  digitalWrite(outpin7, LOW);
+  pinMode(outpin8, OUTPUT);
+  digitalWrite(outpin8, LOW);
+
+  pinMode(inpin1, INPUT);
+  pinMode(inpin2, INPUT);
+  pinMode(inpin3, INPUT);
+}
+
+void loop() {
+  if (digitalRead(inpin3) == true) {
+    function2();
+  }
+  else {
+    if (digitalRead(inpin1) == true) {
+      x = outpin1;
+      y = outpin2;
+      z = outpin3;
+      aa = outpin4;
+      function();
+    }
+    if (digitalRead(inpin2) == true) {
+      x = outpin5;
+      y = outpin6;
+      z = outpin7;
+      aa = outpin8;
+      function();
+    }
+  }
+  digitalWrite(outpin1, LOW);
+  digitalWrite(outpin2, LOW);
+  digitalWrite(outpin3, LOW);
+  digitalWrite(outpin4, LOW);
+  digitalWrite(outpin5, LOW);
+  digitalWrite(outpin6, LOW);
+  digitalWrite(outpin7, LOW);
+  digitalWrite(outpin8, LOW);
+}
+
+void function() {
+  for (int i = 0; i < 5; i++) {
+    if (i < 1) {
+      digitalWrite(x, LOW);
+    }
+    else {
+      digitalWrite(x, HIGH);
+    }
+    if (i < 2) {
+      digitalWrite(y, LOW);
+    }
+    else {
+      digitalWrite(y, HIGH);
+    }
+    if (i < 3) {
+      digitalWrite(z, LOW);
+    }
+    else {
+      digitalWrite(z, HIGH);
+    }
+    if (i < 4) {
+      digitalWrite(aa, LOW);
+    }
+    else {
+      digitalWrite(aa, HIGH);
+    }
+    delay(1000);
+  }
+}
+
+void function2() {
+  for (int i = 0; i < 2; i++) {
+    if (i == 0) {
+      digitalWrite(outpin1, HIGH);
+      digitalWrite(outpin2, HIGH);
+      digitalWrite(outpin3, HIGH);
+      digitalWrite(outpin4, HIGH);
+
+      digitalWrite(outpin5, HIGH);
+      digitalWrite(outpin6, HIGH);
+      digitalWrite(outpin7, HIGH);
+      digitalWrite(outpin8, HIGH);
+
+
+    }
+    else {
+      digitalWrite(outpin1, LOW);
+      digitalWrite(outpin2, LOW);
+      digitalWrite(outpin3, LOW);
+      digitalWrite(outpin4, LOW);
+
+      digitalWrite(outpin5, LOW);
+      digitalWrite(outpin6, LOW);
+      digitalWrite(outpin7, LOW);
+      digitalWrite(outpin8, LOW);
+
+    } 
+    delay(1000);
+  }
+}
